@@ -1,9 +1,9 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 
 const BookContext = createContext()
 
 export default BookContext
 
 export const useBookContext = () => {
-    return useBookContext(BookContext)
+    return useContext(BookContext)
 }
