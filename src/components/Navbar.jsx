@@ -8,7 +8,7 @@ const Navbar = () => {
             <h2>Book Management</h2>
             <div className='d-flex justify-content-evenly gap-3'>
                 <Link to='/'>Home</Link>
-                <Link>Add Books</Link>
+                <Link to='/addBook'>Add Books</Link>
             </div>
         </div>
     </div>
