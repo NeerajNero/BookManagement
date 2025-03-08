@@ -15,7 +15,7 @@ const AddBookPage = () => {
             console.log("Book added successfully")
             console.log(books)
         }else{
-            console.log("error adding book")
+            console.log("error occured while adding book")
         }
     }
   return (
