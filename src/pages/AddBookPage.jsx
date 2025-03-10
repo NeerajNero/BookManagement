@@ -9,7 +9,7 @@ const AddBookPage = () => {
 
     const handleAddBook = async(e) => {
         e.preventDefault()
-        const addBook = await axios.post('http://localhost:5000/books/addBook',{name: bookName, author: authorName})
+        const addBook = await axios.post('https://book-management-backend-ten.vercel.app/books/addBook',{name: bookName, author: authorName})
         if(addBook.status === 201){
             setBooks((prevData) => [...prevData, addBook.data.book])
             console.log("Book added successfully")

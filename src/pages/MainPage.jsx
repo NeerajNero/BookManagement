@@ -15,7 +15,7 @@ const MainPage = () => {
     setBooks((prevData) => prevData.filter((data) => data._id !== bookId))
     const deleteBook = async() => {
      try{
-      await axios.delete(`http://localhost:5000/books/deleteBook/${bookId}`)
+      await axios.delete(`https://book-management-backend-ten.vercel.app/books/deleteBook/${bookId}`)
       console.log("book deleted successfully")
      }catch(error){
       console.log("error occured",error.message)
@@ -26,7 +26,7 @@ const MainPage = () => {
 
   const handleToggleStatus = async(e,bookId) => {
     e.preventDefault()
-    const updateStatus = await axios.put('http://localhost:5000/books/updateStatus',{bookId})
+    const updateStatus = await axios.put('https://book-management-backend-ten.vercel.app/books/updateStatus',{bookId})
     if(updateStatus.status === 200){
       setBooks((prevData) => prevData.map((data) => {
         if(data._id === bookId){

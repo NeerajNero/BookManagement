@@ -8,7 +8,7 @@ export const useFetchBooks = () => {
         const fetchData = async () => {
           try {
             setLoading(true);
-            const { data } = await axios.get("http://localhost:5000/books/books");
+            const { data } = await axios.get("https://book-management-backend-ten.vercel.app/books/books");
             setFetchedData(data.books);
           } catch (error) {
             console.error("Error occurred while fetching books:", error.message);
